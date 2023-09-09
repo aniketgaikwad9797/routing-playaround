@@ -1,2 +1,7 @@
-<p>User with ID _ID_ loaded.</p>
-<p>User name is _NAME_</p>
+<div *ngIf="selectedUser; else info">
+<p>User with {{selectedUser.id}} loaded.</p>
+<p>User name is {{selectedUser.name}}</p>
+</div>
+<ng-template #info>
+Please select a User
+</ng-template>
